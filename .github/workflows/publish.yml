@@ -1,0 +1,92 @@
+name: Publish tested CRM Company Stages
+on:
+  push:
+    branches: [main]
+    paths: ['.release/**', '.github/workflows/publish.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: initial-crm-company-stages-publication
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the artwork renderer and static-check dependencies
+        run: |
+          python -m pip install playwright==1.57.0 lxml==6.0.2
+          python -m playwright install --with-deps chromium
+      - name: Verify source snapshot, render artwork and build all versions
+        run: python .release/bootstrap.py build "$RUNNER_TEMP/prepared"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prepared-release
+          path: ${{ runner.temp }}/prepared/
+          include-hidden-files: true
+          retention-days: 30
+  integration:
+    needs: prepare
+    name: Install and test Odoo ${{ matrix.version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['17.0', '18.0', '19.0']
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared-release
+          path: ${{ runner.temp }}/prepared
+      - name: Install and run the addon in disposable Odoo/PostgreSQL containers
+        env:
+          ODOO_VERSION: ${{ matrix.version }}
+        run: bash "$RUNNER_TEMP/prepared/versions/$ODOO_VERSION/scripts/test_odoo.sh" "$ODOO_VERSION"
+      - name: Confirm all 38 provided tests were discovered
+        env:
+          ODOO_VERSION: ${{ matrix.version }}
+        run: |
+          python3 - <<'PY'
+          import ast, os, pathlib
+          root = pathlib.Path(os.environ['RUNNER_TEMP']) / 'prepared/versions' / os.environ['ODOO_VERSION']
+          tree = ast.parse((root / 'crm_company_stages/tests/test_stage_company.py').read_text())
+          names = [node.name for node in ast.walk(tree) if isinstance(node, ast.FunctionDef) and node.name.startswith('test_')]
+          log = (root / 'test-results' / ('odoo-' + os.environ['ODOO_VERSION'] + '.log')).read_text()
+          assert len(names) == 38, names
+          missing = [name for name in names if name not in log]
+          assert not missing, 'Tests not found in runtime log: ' + repr(missing)
+          print('All 38 addon test methods were discovered in the runtime log.')
+          PY
+      - name: Keep the complete integration log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: odoo-${{ matrix.version }}-integration-log
+          path: ${{ runner.temp }}/prepared/versions/${{ matrix.version }}/test-results/
+          if-no-files-found: warn
+          retention-days: 30
+  publish:
+    needs: [prepare, integration]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared-release
+          path: ${{ runner.temp }}/prepared
+      - name: Publish version branches and website only after every test job passes
+        run: python3 .release/bootstrap.py publish "$RUNNER_TEMP/prepared"

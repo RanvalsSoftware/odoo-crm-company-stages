@@ -1,0 +1,29 @@
+name: Odoo CRM Company Stages checks
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integration:
+    name: Odoo ${{ matrix.version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ['17.0', '18.0', '19.0']
+    steps:
+      - name: Checkout the matching version branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.version }}
+          persist-credentials: false
+      - name: Run in disposable Docker containers
+        run: bash scripts/test_odoo.sh '${{ matrix.version }}'
+      - name: Upload integration logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crm-company-stages-odoo-${{ matrix.version }}
+          path: test-results/
+          if-no-files-found: warn
