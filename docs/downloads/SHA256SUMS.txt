@@ -1,0 +1,3 @@
+92ac3c18b4591294d03697f3d80f6fa700cfa1dd7da3bb4de64716d0d9f8d0db  crm_company_stages-17.0.1.0.0.zip
+7822eaac3d9b5bdceed0a436bba0a6bf481657522d7099eede09cb62d90e225c  crm_company_stages-18.0.1.0.0.zip
+8291140ed2359eb26a1fed1a49e915ef6661896231a8d5cd1b55587eb75859e0  crm_company_stages-19.0.1.0.0.zip
