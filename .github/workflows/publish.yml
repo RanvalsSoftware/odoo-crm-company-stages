@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
       - name: Install the artwork renderer and static-check dependencies
         run: |
-          python -m pip install playwright==1.57.0 lxml==6.0.2
+          python -m pip install playwright==1.57.0 lxml==6.0.2 Babel==2.17.0
           python -m playwright install --with-deps chromium
       - name: Verify source snapshot, render artwork and build all versions
         run: python .release/bootstrap.py build "$RUNNER_TEMP/prepared"
