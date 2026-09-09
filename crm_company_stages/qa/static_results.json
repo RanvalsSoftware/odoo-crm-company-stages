@@ -1,0 +1,18 @@
+{
+  "version": "19.0",
+  "description_html_safety": "PASS",
+  "version_specific_api_signature": "PASS",
+  "static_status": "PASS",
+  "python_files_parsed_and_compiled": 10,
+  "xml_files_parsed": 3,
+  "inherited_views_checked_against_structural_fixtures": 5,
+  "xpath_selectors_checked": 9,
+  "lead_stage_domain_cases": 180,
+  "team_domain_cases": 12,
+  "company_rule_domain_cases": 16,
+  "turkish_translation_messages": 11,
+  "odoo_integration_tests_provided": 38,
+  "odoo_integration_tests_executed": 0,
+  "live_or_staging_installation_executed": false,
+  "scope": "Static checks only, NOT Odoo ORM/UI/integration execution"
+}

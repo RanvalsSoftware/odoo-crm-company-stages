@@ -1,0 +1,44 @@
+<section style="max-width:1100px;margin:0 auto;padding:16px;font-family:Arial,sans-serif;color:#172528;">
+  <img src="cover.png" alt="CRM Company Stages: an illustrated company-specific pipeline for Odoo 17, 18 and 19" style="display:block;width:100%;height:auto;border-radius:18px;"/>
+  <div style="text-align:center;padding:38px 15px 28px;">
+    <p style="font-size:12px;letter-spacing:2px;color:#0c665d;font-weight:bold;margin:0 0 12px;">FREE AND OPEN SOURCE · LGPL-3</p>
+    <h1 style="font-size:36px;color:#123c37;margin:0 0 14px;">CRM Company Stages</h1>
+    <p style="max-width:730px;margin:0 auto;line-height:1.8;font-size:17px;color:#647274;">Give each company its own pipeline stages, even when the salesperson is the same. A focused extension to your existing CRM screens.</p>
+    <p style="font-size:13px;color:#0c665d;margin-top:16px;">This package: <strong>Odoo 19.0</strong> · CRM dependency only · No API key or subscription</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;margin:0 -8px;">
+    <div style="flex:1;min-width:230px;padding:8px;"><div style="height:100%;padding:25px;background:#f4f7f2;border:1px solid #dce5df;border-radius:14px;"><h3 style="font-size:19px;margin:0 0 12px;color:#123c37;">Company-aware columns</h3><p style="font-size:14px;line-height:1.8;color:#647274;margin:0;">Filter populated and empty stages by selected companies. Shared stages remain available, subject to sales-team restrictions.</p></div></div>
+    <div style="flex:1;min-width:230px;padding:8px;"><div style="height:100%;padding:25px;background:#f4f7f2;border:1px solid #dce5df;border-radius:14px;"><h3 style="font-size:19px;margin:0 0 12px;color:#123c37;">Company consistency</h3><p style="font-size:14px;line-height:1.8;color:#647274;margin:0;">Prevent opportunities from using another company's stage through normal create, update and import operations.</p></div></div>
+    <div style="flex:1;min-width:230px;padding:8px;"><div style="height:100%;padding:25px;background:#f4f7f2;border:1px solid #dce5df;border-radius:14px;"><h3 style="font-size:19px;margin:0 0 12px;color:#123c37;">Existing CRM workflow</h3><p style="font-size:14px;line-height:1.8;color:#647274;margin:0;">Keep standard CRM permissions and team restrictions. Bulk Won actions resolve suitable stages by company and team.</p></div></div>
+  </div>
+  <div style="padding:33px;margin:32px 0;background:#123c37;border-radius:17px;color:#ffffff;">
+    <h2 style="font-size:27px;margin:0 0 22px;color:#ffffff;">A familiar place to configure.</h2>
+    <p style="font-size:15px;line-height:1.9;margin:0 0 15px;"><strong style="color:#daf781;">01</strong> &nbsp; Select your working company in the standard company selector.</p>
+    <p style="font-size:15px;line-height:1.9;margin:0 0 15px;"><strong style="color:#daf781;">02</strong> &nbsp; Open the stage column's gear menu, then choose <strong>Edit</strong>.</p>
+    <p style="font-size:15px;line-height:1.9;margin:0;"><strong style="color:#daf781;">03</strong> &nbsp; Set <strong>Company</strong>, or leave it empty for a shared stage. Team restrictions still apply.</p>
+  </div>
+  <div style="padding:20px;background:#f4f7f2;border:1px solid #dce5df;border-radius:16px;text-align:center;">
+    <h2 style="font-size:25px;color:#123c37;margin:4px 0 12px;">Same salesperson. Distinct stages.</h2>
+    <img src="workflow.png" alt="Illustrated workflow showing Company A stages and a shared review stage; not a real Odoo screenshot" style="display:block;max-width:650px;width:100%;height:auto;margin:0 auto;"/>
+    <p style="font-size:12px;line-height:1.7;color:#647274;margin:14px 0 0;">Illustrated workflow, not a live Odoo screenshot. Actual interface layout varies by Odoo version.</p>
+  </div>
+  <div style="padding:30px 5px;">
+    <h2 style="font-size:27px;color:#123c37;margin:0 0 20px;">Know exactly what changes.</h2>
+    <p style="font-size:15px;line-height:1.85;"><strong>Company selection:</strong> selecting A and B together shows both sets of stages. Select only A to hide B's stages. Shared stages are intentionally visible in either company.</p>
+    <p style="font-size:15px;line-height:1.85;"><strong>Existing data:</strong> existing stages remain shared on fresh installation. No opportunities are moved or deleted. Incompatible stage or sales-team company changes are blocked; archived opportunities are checked too.</p>
+    <p style="font-size:15px;line-height:1.85;"><strong>Scope:</strong> pipeline stage columns, not CRM tags. The addon extends CRM and does not add a separate application menu or grant additional permissions.</p>
+    <p style="font-size:15px;line-height:1.85;"><strong>Version details:</strong> this 19.0 package uses the version's native stage structure: multiple sales teams per stage. Use the matching package for your Odoo major version.</p>
+    <p style="font-size:15px;line-height:1.85;"><strong>Hosting:</strong> Odoo.sh or self-hosted Odoo. Not standard Odoo Online. The addon depends on Community CRM; Enterprise/Studio combinations need staging validation.</p>
+    <p style="font-size:15px;line-height:1.85;"><strong>Cost and privacy:</strong> the addon is free and adds no paid dependency, API service, telemetry or remote license check. Odoo licensing and hosting costs are separate.</p>
+  </div>
+  <div style="padding:24px 27px;border:1px solid #e6dfc9;background:#f6f2e6;border-radius:13px;margin-bottom:25px;">
+    <h3 style="font-size:18px;margin:0 0 12px;color:#67593c;">Before production deployment</h3>
+    <p style="font-size:14px;line-height:1.85;margin:0;color:#756849;">Back up first and test in a disposable database. Each package includes 38 Odoo integration test methods; Odoo/PostgreSQL runtime tests have not been executed in this preparation environment. This presentation does not claim live certification.</p>
+    <p style="font-size:14px;line-height:1.85;margin:12px 0 0;color:#756849;">Do not install alongside the previous Company Stages addon, or uninstall it just to rename the addon. A tested technical-name migration is required. An installation safeguard blocks accidental coexistence.</p>
+  </div>
+  <div style="padding:20px 5px;border-top:1px solid #dce5df;">
+    <h3 style="font-size:19px;color:#123c37;">Installation and documentation</h3>
+    <p style="font-size:14px;line-height:1.9;color:#647274;">Place <strong>crm_company_stages</strong> in an addons path, restart Odoo, update the Apps list and install <strong>CRM Company Stages</strong>. Remove the default Apps search filter if necessary. English documentation, Turkish setup notes and a QA report are included. Community support has no promised response time.</p>
+    <p style="font-size:12px;line-height:1.8;color:#7d8980;">LGPL-3.0-or-later · Independent third-party addon. Not an official Odoo product or endorsement. Odoo is a trademark of its respective owner.</p>
+  </div>
+</section>

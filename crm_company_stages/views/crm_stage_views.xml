@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_stage_form_company" model="ir.ui.view">
+        <field name="name">crm.stage.form.company</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form"/>
+        <field name="arch" type="xml">
+            <!-- Also applies to the kanban column gear > Edit modal. -->
+            <xpath expr="//field[@name='team_ids']" position="before">
+                <field name="company_id" placeholder="Shared with all companies"
+                       options="{'no_create': True, 'no_open': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='team_ids']" position="attributes">
+                <attribute name="domain">[('company_id', 'in', [False, company_id])] if company_id else []</attribute>
+            </xpath>
+            <xpath expr="//field[@name='requirements']" position="before">
+                <div class="alert alert-info mb-3" role="alert" invisible="company_id">
+                    This stage is shared with all companies. Select a company to make it company-specific.
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_stage_list_company" model="ir.ui.view">
+        <field name="name">crm.stage.list.company</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_ids']" position="before">
+                <field name="company_id" optional="show" options="{'no_create': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='team_ids']" position="attributes">
+                <attribute name="domain">[('company_id', 'in', [False, company_id])] if company_id else []</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_stage_search_company" model="ir.ui.view">
+        <field name="name">crm.stage.search.company</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_lead_stage_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="company_id"/>
+                <separator/>
+                <filter name="company_stages_shared" string="Shared stages"
+                        domain="[('company_id', '=', False)]"/>
+                <filter name="company_stages_specific" string="Company-specific stages"
+                        domain="[('company_id', '!=', False)]"/>
+                <separator/>
+                <filter name="company_stages_group_company" string="Company"
+                        context="{'group_by': 'company_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
