@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Global intersection with existing ACLs/rules; no extra permissions. -->
+        <record id="crm_stage_company_rule" model="ir.rule">
+            <field name="name">CRM stages: selected companies and shared stages</field>
+            <field name="model_id" ref="crm.model_crm_stage"/>
+            <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+    </data>
+</odoo>

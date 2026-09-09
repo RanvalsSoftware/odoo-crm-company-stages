@@ -1,0 +1,70 @@
+# Translation of CRM Company Stages.
+# Copyright 2026 CRM Company Stages contributors
+# See NOTICE for original attribution.
+# License LGPL-3.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: CRM Company Stages CRM Company Stages 17.0.1.0.0\n"
+"POT-Creation-Date: 2026-09-09 09:00+0000\n"
+"PO-Revision-Date: 2026-09-09 09:00+0000\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+#. module: crm_company_stages
+#: model:ir.model.fields,field_description:crm_company_stages.field_crm_stage__company_id
+#: model_terms:ir.ui.view,arch_db:crm_company_stages.crm_stage_search_company
+msgid "Company"
+msgstr "Şirket"
+
+#. module: crm_company_stages
+#: model:ir.model.fields,help:crm_company_stages.field_crm_stage__company_id
+msgid "This stage belongs to the selected company. Leave empty to share it across companies. Sales team restrictions still apply."
+msgstr "Bu aşama seçilen şirkete aittir. Tüm şirketlerde ortak kullanmak için boş bırakın. Satış ekibi kısıtlamaları ayrıca uygulanır."
+
+#. module: crm_company_stages
+#: model_terms:ir.ui.view,arch_db:crm_company_stages.crm_stage_form_company
+msgid "Shared with all companies"
+msgstr "Tüm şirketlerde ortak"
+
+#. module: crm_company_stages
+#: model_terms:ir.ui.view,arch_db:crm_company_stages.crm_stage_form_company
+msgid "This stage is shared with all companies. Select a company to make it company-specific."
+msgstr "Bu aşama tüm şirketlerde ortaktır. Yalnızca bir şirkette kullanılmasını istiyorsanız Şirket alanını doldurun."
+
+#. module: crm_company_stages
+#: model_terms:ir.ui.view,arch_db:crm_company_stages.crm_stage_search_company
+msgid "Shared stages"
+msgstr "Ortak aşamalar"
+
+#. module: crm_company_stages
+#: model_terms:ir.ui.view,arch_db:crm_company_stages.crm_stage_search_company
+msgid "Company-specific stages"
+msgstr "Şirkete özel aşamalar"
+
+#. module: crm_company_stages
+#: code:addons/crm_company_stages/models/crm_stage.py:0
+msgid "A company-specific stage cannot be linked to a sales team of another company. Choose a matching or shared sales team."
+msgstr "Şirkete özel bir aşama başka şirkete ait satış ekibine bağlanamaz. Aynı şirkete ait veya şirketi boş olan ortak bir satış ekibi seçin."
+
+#. module: crm_company_stages
+#: code:addons/crm_company_stages/models/crm_stage.py:0
+msgid "This stage is used by leads or opportunities belonging to another company, or with no company, including archived records. Move those records to a suitable stage first, or keep this stage shared. No opportunities were moved."
+msgstr "Bu aşamada, başka şirkete ait veya şirketi boş olan müşteri adayları/fırsatlar bulunuyor. Arşivlenmiş kayıtlar da kontrol edilir. Önce bu kayıtları uygun bir aşamaya taşıyın veya aşamayı ortak bırakın. Hiçbir fırsat otomatik taşınmadı."
+
+#. module: crm_company_stages
+#: code:addons/crm_company_stages/models/crm_lead.py:0
+msgid "No suitable Won stage is available for one of the selected companies or sales teams. Configure a matching or shared Won stage before marking these opportunities as won."
+msgstr "Seçilen şirket veya satış ekiplerinden biri için uygun Kazanıldı aşaması bulunamadı. Fırsatları kazanıldı olarak işaretlemeden önce ilgili şirkete/ekibe uygun veya ortak bir Kazanıldı aşaması tanımlayın."
+
+#. module: crm_company_stages
+#: code:addons/crm_company_stages/models/crm_team.py:0
+msgid "This sales team is linked to a stage of another company. Update the stage's sales teams before changing the team's company."
+msgstr "Bu satış ekibi başka şirkete ait bir aşamaya bağlı. Ekibin şirketini değiştirmeden önce ilgili aşamanın Satış Ekipleri alanını düzenleyin."
+
+#. module: crm_company_stages
+msgid "The previous Company Stages addon is already installed or scheduled for a module operation. Do not install both addons together or uninstall the previous addon to rename it. Back up the database and complete a tested technical-name migration first."
+msgstr "Önceki Şirket Aşamaları modülü zaten kurulu veya bir modül işlemi için sırada. İki modülü birlikte kurmayın; adını değiştirmek için önceki modülü kaldırmayın. Önce veritabanını yedekleyin ve test edilmiş bir teknik ad geçişi uygulayın."
