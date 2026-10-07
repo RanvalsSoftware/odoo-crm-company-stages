@@ -2,7 +2,7 @@
 
 Odoo 17, 18, 19 ve 20 için açık kaynaklı, şirket bazlı CRM aşamaları.
 Yayıncı: **Ranvals Software**. Teknik ad: `crm_company_stages`.
-Lisans: LGPL-3.0-or-later. Odoo Apps fiyatı: **9,00 EUR**.
+Lisans: LGPL-3.0-or-later. Odoo Apps fiyatı: **9,99 EUR**.
 
 ## GitHub yayını tamamlandı
 
@@ -34,7 +34,7 @@ https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#19.0
 https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#20.0
 ```
 
-Dört manifestte de yayıncı `Ranvals Software`, Odoo Apps fiyatı `9.00 EUR` ve
+Dört manifestte de yayıncı `Ranvals Software`, Odoo Apps fiyatı `9.99 EUR` ve
 tek doğrudan bağımlılık standart `crm` modülüdür.
 
 ## Mevcut kurulum uyarısı

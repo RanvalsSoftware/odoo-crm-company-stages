@@ -2,7 +2,7 @@
 
 Open-source company-specific CRM stages for Odoo 17, 18, 19 and 20,
 published by **Ranvals Software**. Technical name: `crm_company_stages`.
-License: LGPL-3.0-or-later. Odoo Apps price: **EUR 9.00**.
+License: LGPL-3.0-or-later. Odoo Apps price: **EUR 9.99**.
 
 ## Addon branches
 
