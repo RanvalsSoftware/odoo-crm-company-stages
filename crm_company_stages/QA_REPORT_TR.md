@@ -16,7 +16,8 @@ Odoo test özeti 40 test, 0 hata ve 0 başarısızlık bildirdi.
 | Türkçe PO ve bellekte MO derleme | 11 mesaj geçti |
 | Tanıtım HTML dosyası | Script, iframe, form, harici stil veya olay kodu yok |
 | Mevcut aşamaları dolduracak company_id alan varsayılanı | Yok |
-| Ücretli modül bağımlılığı / price | Yok |
+| Odoo Apps liste fiyatı / currency | 9.00 EUR |
+| Ücretli ek modül bağımlılığı | Yok |
 
 Toplam **208 domain kombinasyonu** paket doğrulayıcısında kontrol edilmiştir.
 
