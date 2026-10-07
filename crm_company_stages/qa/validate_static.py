@@ -107,7 +107,7 @@ def main():
     assert manifest["maintainer"] == "Ranvals Software"
     assert manifest["website"] == "https://www.odooranvals.com"
     assert manifest["support"] == "info@ranvals.com"
-    assert manifest["price"] == 9.0
+    assert manifest["price"] == 9.99
     assert manifest["currency"] == "EUR"
     assert manifest["license"] == "LGPL-3"
     assert manifest["pre_init_hook"] == "pre_init_hook"
