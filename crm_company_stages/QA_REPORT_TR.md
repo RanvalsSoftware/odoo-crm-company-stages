@@ -20,7 +20,8 @@ Aşağıdaki rapor ilk hazırlık ortamını anlatır. Daha sonra gerçekleştir
 | Tanıtım HTML dosyası | Script, iframe, form, harici stil veya olay kodu yok |
 | İkon / kapak / açıklama yolları | Dosyalar mevcut |
 | Mevcut aşamaları dolduracak company_id alan varsayılanı | Yok |
-| Ücretli modül bağımlılığı / price | Yok |
+| Odoo Apps liste fiyatı / currency | 9.00 EUR |
+| Ücretli ek modül bağımlılığı | Yok |
 
 Toplam **208 domain kombinasyonu** denetlendi. Bu kontroller Odoo ORM'yi veya
 PostgreSQL'i çalıştırmaz. XPath örnekleri bir canlı birleşik görünüm değildir.
