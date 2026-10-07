@@ -2,7 +2,7 @@
 
 Hesap: RanvalsSoftware. Depo: odoo-crm-company-stages.
 Ürün adı: CRM Company Stages. Teknik ad: crm_company_stages.
-Ücretsiz dağıtım: manifestte fiyat yok, LGPL-3.
+Yayıncı: Ranvals Software. Odoo Apps liste fiyatı: 9,00 EUR. Lisans: LGPL-3.
 
 ## Odoo Apps
 
@@ -13,6 +13,7 @@ deposunu kaydedin. Dalları ayrı kayıt olarak isteyen arayüz için adresler:
 https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#17.0
 https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#18.0
 https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#19.0
+https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#20.0
 ```
 
 Dallar taranmalı; tarama ve mağaza onayı GitHub'a yüklemeden ayrıdır. Mağaza

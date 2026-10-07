@@ -1,7 +1,8 @@
 # CRM Company Stages
 
-Odoo 17, 18 ve 19 için ücretsiz ve açık kaynaklı, şirket bazlı CRM aşamaları.
-Teknik ad: `crm_company_stages`. Lisans: LGPL-3.0-or-later.
+Odoo 17, 18, 19 ve 20 için açık kaynaklı, şirket bazlı CRM aşamaları.
+Yayıncı: **Ranvals Software**. Teknik ad: `crm_company_stages`.
+Lisans: LGPL-3.0-or-later. Odoo Apps fiyatı: **9,00 EUR**.
 
 ## GitHub yayını tamamlandı
 
@@ -10,6 +11,7 @@ Teknik ad: `crm_company_stages`. Lisans: LGPL-3.0-or-later.
 | 17 | [17.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/17.0) | 38 entegrasyon testi başarılı |
 | 18 | [18.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/18.0) | 38 entegrasyon testi başarılı |
 | 19 | [19.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/19.0) | 38 entegrasyon testi başarılı |
+| 20 | [20.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/20.0) | Temiz kurulum ve 40 Odoo testi başarılı |
 
 9 Eylül 2026 tarihinde üç sürüm gerçek Odoo Community/PostgreSQL konteynerlerinde kuruldu ve test edildi. [Başarılı yayın ve test kaydı](https://github.com/RanvalsSoftware/odoo-crm-company-stages/actions/runs/34346220917). Ayrıntılar: [VALIDATION.md](VALIDATION.md). Statik kontrollerde toplam 552 şirket/ekip/domain kombinasyonu değerlendirildi. Bu sonuçlar her Enterprise eklentisi veya müşteri özelleştirmesi için garanti değildir; hedef sistemde yedek ve test kurulumu gereklidir.
 
@@ -17,7 +19,7 @@ Teknik ad: `crm_company_stages`. Lisans: LGPL-3.0-or-later.
 
 ## Tanıtım sitesi
 
-Site dosyası [docs/index.html](docs/index.html). GitHub Pages yönetim ayarı bu bağlantı üzerinden değiştirilmedi. Ücretsiz siteyi açmak için **Settings > Pages > Deploy from a branch > main > /docs > Save** seçin.
+Site dosyası [docs/index.html](docs/index.html). GitHub Pages yönetim ayarı bu bağlantı üzerinden değiştirilmedi. Siteyi açmak için **Settings > Pages > Deploy from a branch > main > /docs > Save** seçin.
 
 Tanıtım görselleri temsili çizimlerdir, gerçek Odoo ekran görüntüsü değildir.
 
@@ -29,9 +31,11 @@ Tanıtım görselleri temsili çizimlerdir, gerçek Odoo ekran görüntüsü de�
 https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#17.0
 https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#18.0
 https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#19.0
+https://github.com/RanvalsSoftware/odoo-crm-company-stages.git#20.0
 ```
 
-Üç manifestte de fiyat alanı yoktur ve tek doğrudan bağımlılık ücretsiz `crm` modülüdür. Diğer ücretli uygulama depolarında değişiklik yapılmadı.
+Dört manifestte de yayıncı `Ranvals Software`, Odoo Apps fiyatı `9.00 EUR` ve
+tek doğrudan bağımlılık standart `crm` modülüdür.
 
 ## Mevcut kurulum uyarısı
 

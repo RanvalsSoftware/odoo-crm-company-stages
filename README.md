@@ -1,7 +1,8 @@
 # CRM Company Stages
 
-Free, open-source company-specific CRM stages for Odoo 17, 18 and 19.
-Technical name: `crm_company_stages`. License: LGPL-3.0-or-later.
+Open-source company-specific CRM stages for Odoo 17, 18, 19 and 20,
+published by **Ranvals Software**. Technical name: `crm_company_stages`.
+License: LGPL-3.0-or-later. Odoo Apps price: **EUR 9.00**.
 
 ## Addon branches
 
@@ -10,9 +11,10 @@ Technical name: `crm_company_stages`. License: LGPL-3.0-or-later.
 | 17 | [17.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/17.0) | `crm_company_stages/` |
 | 18 | [18.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/18.0) | `crm_company_stages/` |
 | 19 | [19.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/19.0) | `crm_company_stages/` |
+| 20 | [20.0](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/20.0) | `crm_company_stages/` |
 
 `main` contains the standalone promotional site under `docs/` and publication documentation.
-The module has no price or paid dependency. Other repositories are unaffected.
+The module has no paid dependency, remote license server or telemetry.
 
 ## What it does
 
@@ -23,11 +25,12 @@ intentionally shows both companies' stages. This addon scopes stages, not tags.
 
 ## Validation
 
-The publication workflow runs the provided 38 Odoo integration tests for **each**
-version in disposable Odoo/PostgreSQL containers before creating version branches.
+The publication workflow ran the provided integration tests for Odoo 17, 18 and
+19 before creating those branches. The Odoo 20 port was installed and tested in
+a clean Odoo/PostgreSQL environment before publication.
 Review the [workflow runs](https://github.com/RanvalsSoftware/odoo-crm-company-stages/actions) for actual results and commit references.
-Static validation covers 552 domain cases across the three versions. Browser
-smoke tests on the target installation remain recommended.
+Static validation covers the company, team and stage-domain combinations for
+all supported versions. Browser smoke tests on the target installation remain recommended.
 
 The demonstration graphics are illustrations, not real Odoo screenshots.
 The build regenerates the original supplied HTML artwork as PNG files.
