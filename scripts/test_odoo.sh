@@ -2,7 +2,7 @@
 # Disposable integration runner. Never point this script at a production database.
 set -Eeuo pipefail
 version="${1:-}"
-case "$version" in 17.0|18.0|19.0) ;; *) echo 'Usage: bash scripts/test_odoo.sh 17.0|18.0|19.0' >&2; exit 2;; esac
+case "$version" in 17.0|18.0|19.0|20.0) ;; *) echo 'Usage: bash scripts/test_odoo.sh 17.0|18.0|19.0|20.0' >&2; exit 2;; esac
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 command -v docker >/dev/null || { echo 'Docker is required.' >&2; exit 2; }
 command -v python3 >/dev/null || { echo 'Python 3 is required.' >&2; exit 2; }
@@ -58,7 +58,7 @@ docker run --name "$app" --network "$network" \
     "odoo:${version}" odoo \
     -d crm_stages_disposable -i crm_company_stages \
     --test-enable --test-tags /crm_company_stages \
-    --stop-after-init --without-demo=all --http-port=8069 \
+    --stop-after-init --without-demo=True --http-port=8069 \
     --limit-time-cpu=1200 --limit-time-real=2400 \
     --log-handler=odoo.addons.crm_company_stages.tests:INFO \
     2>&1 | tee "$log"

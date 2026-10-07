@@ -1,4 +1,4 @@
-# CRM Company Stages — Odoo 19.0
+# CRM Company Stages — Odoo 20.0
 
 Free LGPL-3 addon: `crm_company_stages/`.
 

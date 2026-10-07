@@ -1,4 +1,4 @@
-# CRM Company Stages — Odoo 19.0
+# CRM Company Stages — Odoo 20.0
 
 **Teknik ad:** `crm_company_stages` · **Lisans:** LGPL-3 · **Modül bedeli:** Ücretsiz
 
@@ -19,7 +19,7 @@ standart çoklu şirket seçimine uyumlu davranıştır. Ortak aşamalar varsa b
 her iki şirkette de görünür; ekip kısıtlamaları yine uygulanır.
 
 ## Kurulum
-Bu arşivden `crm_company_stages` klasörünü uygun Odoo 19.0 sunucusunun özel
+Bu arşivden `crm_company_stages` klasörünü uygun Odoo 20.0 sunucusunun özel
 addons dizinine koyun; servisi yeniden başlatın, uygulama listesini güncelleyin.
 Gerekirse varsayılan **Uygulamalar** arama filtresini kaldırıp **CRM Company Stages**
 arayın. CRM bağımlılığı otomatik kurulur. Odoo.sh veya kendi sunucunuz gerekir;
@@ -39,9 +39,9 @@ Kurulu bir modülün XML kimlikleri ve alan sahipliği için ayrıca test edilmi
 ad migrasyonu gerekir. Bu dağıtım otomatik veri migrasyonu içermez.
 
 ## Kontroller ve sınırlar
-Paket statik olarak kontrol edilir. 38 Odoo entegrasyon testi eklenmiştir ancak
-bu hazırlık ortamında Odoo/PostgreSQL kurulum testi çalıştırılmamıştır. Üretimden
-önce ayrı test veritabanında kurulum, yükseltme ve şirket geçişleri doğrulanmalıdır.
+Paket statik olarak kontrol edilir. Odoo 20 paketi temiz bir yerel PostgreSQL
+veritabanına kurulmuş ve 38 entegrasyon test metodunun tamamı geçmiştir. Üretimden
+önce yine ayrı test veritabanında kurulum, yükseltme ve şirket geçişleri doğrulanmalıdır.
 Odoo Enterprise, Studio ve diğer CRM eklentileriyle birleşik test ayrıca gerekir.
 Kaldırma şirket ayrımını ortadan kaldırır; kaldırmadan önce yedek alın.
 

@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: ['17.0', '18.0', '19.0']
+        version: ['17.0', '18.0', '19.0', '20.0']
     steps:
       - name: Checkout the matching version branch
         uses: actions/checkout@v4

@@ -4,7 +4,7 @@
 # License LGPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: CRM Company Stages CRM Company Stages 19.0.1.0.0\n"
+"Project-Id-Version: CRM Company Stages CRM Company Stages 20.0.1.0.0\n"
 "POT-Creation-Date: 2026-09-09 09:00+0000\n"
 "PO-Revision-Date: 2026-09-09 09:00+0000\n"
 "Language: tr\n"

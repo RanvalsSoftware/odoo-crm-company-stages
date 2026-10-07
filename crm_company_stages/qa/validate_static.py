@@ -2,13 +2,14 @@
 """Static package checks only. Does NOT import, install or simulate Odoo.
 
 The tiny XML fixtures below capture the relevant selector structure of the
-reviewed upstream 19.0 views. They are not a copy of a live combined view.
+reviewed upstream 20.0 views. They are not a copy of a live combined view.
 Domain truth-table checks evaluate this module's literal domain expressions;
 they do NOT execute Odoo ORM/security and must not be called integration tests.
 """
 from __future__ import annotations
 
 import ast
+import csv
 from copy import deepcopy
 from io import BytesIO
 import json
@@ -96,7 +97,7 @@ def field_call(tree: ast.AST, name: str):
 
 def main():
     manifest = ast.literal_eval((ROOT / "__manifest__.py").read_text(encoding="utf-8"))
-    assert manifest["version"] == "19.0.1.0.0"
+    assert manifest["version"] == "20.0.1.0.0"
     assert manifest["depends"] == ["crm"]
     assert manifest["installable"] is True
     for name in manifest["data"]:
@@ -206,19 +207,21 @@ def main():
             )
             team_cases += 1
 
-    rule = etree.parse(str(ROOT / "security/crm_stage_security.xml")).xpath("//record")[0]
-    assert rule.find("field[@name='groups']") is None, "Company rule must be global"
-    assert rule.find("field[@name='model_id']").get("ref") == "crm.model_crm_stage"
-    rule_text = rule.find("field[@name='domain_force']").text
+    with (ROOT / "security/ir.access.csv").open(encoding="utf-8", newline="") as fh:
+        access_rows = list(csv.DictReader(fh))
+    assert len(access_rows) == 1
+    rule = access_rows[0]
+    assert rule["id"] == "crm_stage_company_rule"
+    assert not rule["group_id/id"], "Company restriction must be global"
+    assert rule["model_id"] == "crm.stage"
+    assert rule["operation"] == "crud"
+    rule_text = rule["domain"]
     rule_cases = 0
     for selected in [[10], [20], [10, 20], [20, 10]]:
         domain = expression(rule_text, company_ids=selected)
         for owner in [False, 10, 20, 30]:
             assert matches(domain, {"company_id": owner}) == (not owner or owner in selected)
             rule_cases += 1
-    for mode in ["read", "write", "create", "unlink"]:
-        assert rule.find(f"field[@name='perm_{mode}']").get("eval") == "True"
-
     with (ROOT / "i18n/tr.po").open("rb") as fh:
         catalog = read_po(fh, locale="tr", abort_invalid=True)
     assert not list(catalog.check())
@@ -240,7 +243,7 @@ def main():
     source = (ROOT / "models/crm_lead.py").read_text()
     assert ("from odoo.fields import Domain" in source) is True
     result = {
-        "version": "19.0",
+        "version": "20.0",
         "description_html_safety": "PASS",
         "version_specific_api_signature": "PASS",
         "static_status": "PASS",

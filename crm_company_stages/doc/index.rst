@@ -1,7 +1,7 @@
 CRM Company Stages
 ==================
 
-Free, open-source company-specific pipeline stages for Odoo 19.0.
+Free, open-source company-specific pipeline stages for Odoo 20.0.
 The addon extends the existing CRM interface; it does not add a separate app menu.
 
 Features
@@ -37,10 +37,11 @@ just to change its technical name: a dedicated migration is required.
 
 Testing
 -------
-38 Odoo integration test methods are included. They have NOT been executed in
-an Odoo/PostgreSQL runtime in this preparation environment. See QA_REPORT_TR.md.
+38 Odoo integration test methods are included. The Odoo 20 package was installed
+and all of them passed in a clean local Odoo/PostgreSQL runtime. See
+QA_REPORT_TR.md and the repository validation notes.
 Run: ``odoo -d disposable_test -i crm_company_stages --test-enable
---test-tags /crm_company_stages --stop-after-init --without-demo=all``.
+--test-tags /crm_company_stages --stop-after-init --without-demo=True``.
 
 License and privacy
 -------------------

@@ -1,7 +1,7 @@
 # Copyright 2026 CRM Company Stages contributors
 # See NOTICE for original attribution.
 # License LGPL-3.0-or-later.
-"""Odoo 19 integration tests. Run only in a disposable/staging database.
+"""Odoo 20 integration tests. Run only in a disposable/staging database.
 
 These tests require a running Odoo test environment and PostgreSQL. They are
 not substitutes for the separately reported static package validation.
