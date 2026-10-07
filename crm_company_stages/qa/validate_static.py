@@ -103,7 +103,12 @@ def main():
         assert (ROOT / name).is_file(), name
 
     assert manifest["name"] == "CRM Company Stages"
-    assert not manifest.get("price", 0)
+    assert manifest["author"] == "Ranvals Software"
+    assert manifest["maintainer"] == "Ranvals Software"
+    assert manifest["website"] == "https://www.odooranvals.com"
+    assert manifest["support"] == "info@ranvals.com"
+    assert manifest["price"] == 9.0
+    assert manifest["currency"] == "EUR"
     assert manifest["license"] == "LGPL-3"
     assert manifest["pre_init_hook"] == "pre_init_hook"
     for image in manifest["images"]:

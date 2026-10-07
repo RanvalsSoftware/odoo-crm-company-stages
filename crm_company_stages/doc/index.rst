@@ -1,7 +1,7 @@
 CRM Company Stages
 ==================
 
-Free, open-source company-specific pipeline stages for Odoo 18.0.
+Open-source company-specific pipeline stages for Odoo 18.0, published by Ranvals Software.
 The addon extends the existing CRM interface; it does not add a separate app menu.
 
 Features
@@ -46,7 +46,7 @@ License and privacy
 -------------------
 LGPL-3.0-or-later; see LICENSE, COPYING and NOTICE. No license server,
 subscription, API key, telemetry, external service or paid dependency is added.
-The Odoo software/licensing/hosting costs are separate from this free addon.
+The Odoo Apps price is EUR 9.00. Odoo software/licensing/hosting costs are separate.
 Community support has no promised response time. Report issues through the
 publishing repository after it has been created.
 
