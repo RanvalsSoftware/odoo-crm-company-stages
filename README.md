@@ -1,6 +1,6 @@
 # CRM Company Stages — Odoo 20.0
 
-Odoo Apps package (EUR 9.00), licensed under LGPL-3: `crm_company_stages/`.
+Odoo Apps package (EUR 9.99), licensed under LGPL-3: `crm_company_stages/`.
 
 [Website source](https://github.com/RanvalsSoftware/odoo-crm-company-stages/tree/main/docs) · [Validation](https://github.com/RanvalsSoftware/odoo-crm-company-stages/blob/main/VALIDATION.md) · [Actions](https://github.com/RanvalsSoftware/odoo-crm-company-stages/actions)
 

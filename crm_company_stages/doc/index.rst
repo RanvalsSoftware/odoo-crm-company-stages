@@ -47,7 +47,7 @@ License and privacy
 -------------------
 LGPL-3.0-or-later; see LICENSE, COPYING and NOTICE. No license server,
 subscription, API key, telemetry, external service or paid dependency is added.
-The Odoo Apps price is EUR 9.00. Odoo software/licensing/hosting costs are separate.
+The Odoo Apps price is EUR 9.99. Odoo software/licensing/hosting costs are separate.
 Community support has no promised response time. Report issues through the
 publishing repository after it has been created.
 

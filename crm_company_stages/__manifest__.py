@@ -7,7 +7,7 @@
  'license': 'LGPL-3',
  'website': 'https://www.odooranvals.com',
  'support': 'info@ranvals.com',
- 'price': 9.0,
+ 'price': 9.99,
  'currency': 'EUR',
  'depends': ['crm'],
  'data': ['security/ir.access.csv',

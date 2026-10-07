@@ -1,6 +1,6 @@
 # CRM Company Stages — Odoo 20.0
 
-**Teknik ad:** `crm_company_stages` · **Lisans:** LGPL-3 · **Odoo Apps fiyatı:** 9,00 EUR
+**Teknik ad:** `crm_company_stages` · **Lisans:** LGPL-3 · **Odoo Apps fiyatı:** 9,99 EUR
 
 ## Ne yapar?
 CRM panosundaki aşama sütununa şirket alanı ekler. Aynı satış temsilcisi iki
@@ -46,6 +46,6 @@ Odoo Enterprise, Studio ve diğer CRM eklentileriyle birleşik test ayrıca gere
 Kaldırma şirket ayrımını ortadan kaldırır; kaldırmadan önce yedek alın.
 
 ## Ücret ve gizlilik
-Odoo Apps liste fiyatı 9,00 EUR'dur. Ücretli ek bağımlılığı, API anahtarı, abonelik, takip kodu veya
+Odoo Apps liste fiyatı 9,99 EUR'dur. Ücretli ek bağımlılığı, API anahtarı, abonelik, takip kodu veya
 uzak lisans kontrolü yoktur. Odoo lisansı ve barındırma giderleri ayrı konudur.
 Ürün adı ve tanıtım markasızdır; kaynak atıfları NOTICE dosyasında korunmuştur.
